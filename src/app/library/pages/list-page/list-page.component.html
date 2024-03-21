@@ -1,0 +1,16 @@
+<mat-list role="list">
+
+  <mat-list-item *ngFor="let author of authors, let i = index"
+  role="listitem"  >
+  <div class="flex align-items-center" >
+    <span >{{i}}</span>
+    <span>{{author}}</span>
+    <button  [routerLink]="['/library/author',  author]">
+      Obras
+    </button>
+  </div>
+
+
+</mat-list-item>
+
+</mat-list>

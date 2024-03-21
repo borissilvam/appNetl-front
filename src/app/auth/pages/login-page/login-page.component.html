@@ -1,0 +1,40 @@
+
+<div  class="flex flex-column">
+
+  <span class="text-lg mb-4"> Login</span>
+
+  <form [formGroup]="loginForms" (ngSubmit)="onLogin()"
+  class="flex flex-column" >
+    <mat-form-field>
+      <mat-label>Correo ELectronico</mat-label>
+      <input
+      formControlName="email"
+      matInput>
+      <mat-error>{{getFieldErros('email')}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Contraseña</mat-label>
+      <input
+      formControlName="password"
+      matInput
+      type="password">
+      <mat-error>{{getFieldErros('password')}}</mat-error>
+    </mat-form-field>
+
+    <button
+    mat-raised-button color="primary"
+    >
+      Login
+      <mat-icon>save</mat-icon>
+    </button>
+
+  </form>
+
+
+
+  <div class="flex justify-content-end mt-5 ">
+    <a routerLink="/auth/register">Registrar Cuenta</a>
+</div>
+</div>
+
